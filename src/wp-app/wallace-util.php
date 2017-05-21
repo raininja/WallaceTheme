@@ -23,7 +23,7 @@ class Wallace{
 	}
 
 	public static function get_post($id){
-		$request = new WP_REST_Request('GET', '/wallace/v1/posts/'.$id);
+		$request = new WP_REST_Request('GET', '/wallace/v1/posts/'.$id); // endpoint used here created in endpoint.php
 		$response = rest_get_server()->dispatch($request);
 		return $response->data['posts'];
 	}
