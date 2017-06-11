@@ -10,19 +10,19 @@ module.exports = {
          path: './dist',
          filename: 'app.bundle.js'
      },
-     devtool: "source-map", 
+     devtool: "source-map",
      resolve: {
        extensions: ['.ts', '.js', '.scss', '.html']
      },
      module: {
          loaders: [
-         { 
-         	test: /\.scss$/, 
-         	loader: ExtractTextPlugin.extract('css-loader?sourceMap!postcss-loader!sass-loader?sourceMap') 
+         {
+         	test: /\.scss$/,
+         	loader: ExtractTextPlugin.extract('css-loader?sourceMap!postcss-loader!sass-loader?sourceMap')
          },
          {
             test: /\.ts$/,
-            loaders: ['awesome-typescript-loader', 'angular2-template-loader']    
+            loaders: ['awesome-typescript-loader', 'angular2-template-loader'] //, 'angular2-router-loader?genDir=compiled/app&aot=true']    
           },
           {
             test: /\.html$/,
